@@ -61,7 +61,7 @@ import Home from '@/components/home'
 6. 在`main.js`中的`Vue`实例中加入 `router：r`,r是存实例的变量
 7. 在`app.vue`下告诉它要显示在哪儿，使用`router-view`标签就可以
 
-**补充**
+## 补充
 
 1. 动态路由： 多个视图使用同一个模板
   path: 'user/:id?' id可以出现0次或1次
@@ -101,6 +101,14 @@ import Home from '@/components/home'
     }
   }
   ```
+6. css的引入，新建一个文件夹存放css,并建立一个app.css,引入其他所有css文件
+```
+// app.css
+@import './index.css';
+
+//main.js
+require('./assets/css/app.css')
+```
 
 ---
 ```
