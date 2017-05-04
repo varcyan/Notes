@@ -18,29 +18,32 @@
   // 通过import引入 (`vue`入口 `app`组件入口)
   import Vue from 'vue'
   import App from './App'
-  import Router from 'vue-router'  //引入router 详情见package.json文件
-  //使router作为vue的插件用
+  import Router from 'vue-router' // 引入router 详情见package.json文件
+  import Router from './router'   // 如新建了一个router文件夹 引入其下index.js
+  // 引入vue
+  import Home from '@/components/home'
+
+  // 使router作为vue的插件用
   Vue.use(VueRouter)
-  var r = new VueRouter() 创建一个实例并注册
-      传入一个对象，routes是一个数组，在這里规定目录与视图
-    Vue实例中加入 router：r
+  // 创建一个实例并注册
+  var r = new VueRouter({ // 這个对象规定目录与视图
+    routes: [
+      {
+        path: '/',
+        component: Home //這里的Home是用import引入的组件
+      }
+    ]
+  })
+  // 记得在Vue实例中加入 router：r
    ```
    **import**
    import 定义名称 from '路径'
 
-2. components下创建一个vue文件
-3. 在main.js里配置  routes数组中加入
-  首先引入 import Home from '@components/home'
-    '@'是指src目录下
-  {
-    path: '/',
-
-  }
-4. 在app.vue下告诉它要显示在哪儿
-  使用router-view标签就可以
+2. 在`app.vue`下告诉它要显示在哪儿
+  使用`router-view`标签就可以
 5. 新建一个router文件夹 下 index.js 把路由写在那里
   并把index文件引入main.js '@/router'
-  所有的配置都在index里写 export default router 吧這个实例暴露出去
+  所有的配置都在index里写 export default router 把這个实例暴露出去
  6. 动态路由 多个视图使用同一个模板
   path: 'user/:id?' id可以出现0次或1次
  7. 路由信息对象
@@ -71,6 +74,7 @@
  12. 给路由命名 nameg
 
 ---
+```
 src
 | - assets - css
 | - components - 公共文件
@@ -79,7 +83,7 @@ src
 |- main.js
   导入 css 的入口文件
   require('./assets/css/app.css')
-
+```
  先写首页的组件
  引入header
   在需要的文件中import 引入，并在export default 暴露注册 components:{customHeader }
