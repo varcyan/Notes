@@ -8,15 +8,15 @@
 var arr = [];   
 ```
 
-2. new Array()
+1. new Array()
 
 ```javascript
 var arr = new Array(1,2,3);	// [1,2,3]
 var arr = new Array('a');	// ['a']
-var arr = new Array(5);  	// 如果只传一个参数，并且这个参数是数字的情况下，那么代表创建一个长度为这个数字的“空”数组
+var arr = new Array(5);    // 如果只传一个参数，并且这个参数是数字的情况下，那么代表创建一个长度为这个数字的“空”数组
 ```
 
-3. Array.of
+1. Array.of
 
 ```javascript
 var arr = Array.of(array)	//参数写数组中的值，多个值用逗号隔开
