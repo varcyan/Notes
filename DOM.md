@@ -14,7 +14,7 @@ DOM: Document Object Model，文档对象模型，是HTML为JS操作页面元素
 - 属性节点 对应数字 2 #attr value
 - 文本节点 对应数字 3 #text value
 - 注释节点 对应数字 8 #comment value
-- 文档节点 对应数字 9 #document null
+- 文档节点 对应数字 9 #document nullww
 
 ## DOM方法
 
@@ -45,7 +45,7 @@ DOM: Document Object Model，文档对象模型，是HTML为JS操作页面元素
 
 #### 获取元素节点
 
-获取某个元素的所有元素子节点 
+获取某个元素的所有元素子节点
 > Node.children;
 
 获取某个节点的上一个兄弟元素节点
@@ -90,7 +90,7 @@ DOM: Document Object Model，文档对象模型，是HTML为JS操作页面元素
 #### **获取状态**
 
 当浏览器滚动条滚动的时候
-> window.onscroll = function (){} 
+> window.onscroll = function (){}
 
 当窗口尺寸变化的时候
 > window.onresize = function (){}
