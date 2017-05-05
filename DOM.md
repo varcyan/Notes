@@ -14,7 +14,7 @@ DOM: Document Object Model，文档对象模型，是HTML为JS操作页面元素
 - 属性节点 对应数字 2 #attr value
 - 文本节点 对应数字 3 #text value
 - 注释节点 对应数字 8 #comment value
-- 文档节点 对应数字 9 #document nullww
+- 文档节点 对应数字 9 #document null
 
 ## DOM方法
 
