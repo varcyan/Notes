@@ -54,3 +54,24 @@
   ```
   import List from './component/test'
   ```
+
+
+
+let h = <h1></h1>;  //react元素
+
+class H extends React.Component {
+  render (){
+    return <h1>{arr}</h1>
+  }
+}
+
+let arr = [<span></span>, <span></span>];
+
+ReactDOM。render(
+  要渲染的内容，
+  渲染的位置,
+  回掉函数
+)
+**通信**
+父组件通知子组件 this.props
+子组件通知父组件 通过函数传参数

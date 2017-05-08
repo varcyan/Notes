@@ -1,0 +1,126 @@
+# svg
+
+## 基本形状
+
+### rect(矩形)
+- x (矩形左上角x的位置)
+- y
+- width
+- height
+- rx (x方向的圆角半径)
+- ry
+
+### circle(圆形)
+
+- r (半径)
+- cx (圆心x的位置)
+- cy
+
+### ellipse(椭圆)
+- rx (椭圆x半径)
+- ry
+- cx (椭圆中心x的位置)
+- cy
+
+### line(直线)
+- x1 (起点x的位置)
+- y1
+- x2 (终点x的位置)
+- y2
+
+### polyline(折线)
+- points (所有的点的位置集合)
+
+### polygon(多边形)
+- points (所有的点的位置集合)
+
+最后一个点自动回到第一个点
+
+path(路径)
+- d (点集数列)
+- M,m  移动画笔 路径起始点(x y)+ (大写是绝对位置，小写是相对位置)
+- Z,z  关闭路径(none) 将路径的开始和结束点用直线连接
+- L  画线到(x y)+ 当前节点到指定(x,y)节点，直线连接
+- H  水平线到x+  保持当前点的y坐标不变，x轴移动到x, 形成水平线
+- V  垂直线到y+ 保持当前点的x坐标不变，y轴移动到y, 形成垂直线
+- C   三次贝塞尔曲线到(x1 y1 x2 y2 x y)+
+- S  光滑三次贝塞尔曲线到(x2 y2 x y)+
+- Q  二次贝塞尔曲线到(x1 y1 x y)+
+- T  光滑二次贝塞尔曲线到(x y)+
+- A  椭圆弧(rx ry x-axis-rotation large-arc-flag sweep-flag x y)+
+- R * Catmull-Rom曲线x1 y1 (x y)+
+
+fill 填充
+- stroke 线的颜色
+- stroke-width 线的宽度
+
+animation
+- attrbuteName
+  - 说明:要变化的属性名
+  - 适用:行内直接暴露的属性(css属性)
+
+- attrbuteType
+  - 说明:要变化属性的类型
+  - 适用:
+    - XML 行内直接暴露的属性
+    - CSS css属性
+
+from, to, by, values
+- 说明
+  - from 起始值
+  - to 结束值
+  - by 相对变化值
+  - values 多个经过点(超过7个路径才会形成动画)
+
+- 适用 : 运动过程中的路径点
+
+begin end
+- 说明:begin 开始时间（延迟时间）
+
+- 常规值
+  - id.end 当某个动画结束后开始(id是某个animation的id)
+  - id.end+1s 可以是表达式
+
+end 结束时间
+- 适用:设置动画的开始或结束时间
+
+dur
+- 说明:动画总时间
+- 适用:常规时间值 | indefinite
+
+calcMode, keyTimes, keySplines
+- calcMode 速率方式
+- discrete 离散
+- linear 线性
+- paced 插值步调平稳均匀
+- spline 插值定义贝塞尔
+
+keyTimes 关键时间点
+- keySplines 与keyTimes相关联的贝塞尔曲线
+
+repeatCount, repeatDur
+- 说明
+  - repeatCount 动画执行总次数
+  - repeatDur 动画执行总时间
+- 合法数值 | indefinite(循环)
+
+fill
+- 说明：fill表示动画间隙的填充方式(结束时的停留帧)
+- 参数
+  - remote 动画结束后回复默认值
+  - freeze 保持动画结束后的状态
+
+animateTransform
+- type
+- 参数
+  - rotate
+  - translate
+  - scale
+  - skew
+  - from
+
+animateMotion
+- 说明：引导动画线
+- 参数
+  - path = ""  沿着运动的路径
+  - rotate = "auto" 运动时自动旋转
