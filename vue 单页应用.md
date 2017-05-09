@@ -134,3 +134,23 @@ package.json  dependencies 打包需要
 
 webpack 打包  
 vue-cil webpack - js 配置
+
+### 请求服务器数据
+请求的模块 axios   &  vue-axios
+1. 安装  yarn add xxx
+2. 引入
+```javascript
+// import axios from 'axios'  //不能用use 所有引入下面的孩子额个
+import axios from 'vue-axios'
+
+Vue.use(axios)  //* 重要
+
+export default {
+
+}
+
+```
+
+**跨域问题**
+
+index.js中配置代理
