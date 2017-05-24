@@ -14,6 +14,10 @@ module.exports = {
 		path: __dirname, //生成文件的路径，必须是绝对路径
 		filename: 'build.js' //生成文件的名字
 	},
+	/*
+	entry：{ key:value }	//key是输出文件的名字
+	*/
+	
 	module:{    // 用来配合处理模块的
 		rules:[ // 用来配置处理某块的规则
 			{
@@ -24,3 +28,38 @@ module.exports = {
 	}
 }
 ```
+webpack  
+	作用： 分析依赖打包(某一类功能放在一个文件/模块)  
+	工具： 帮助分析这写依赖，并且打包  
+	入口文件： 版本  
+	
+	把用到的模块（文件）暴露出去
+	```
+	export default data;	// ES6
+	module.exports = data	//
+	```
+	引入依赖的模块
+	```
+	export data from './data'
+	```
+	总入口
+	```
+	// 这两个文件不相互依赖
+	import './event'
+	import './crete'
+	```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
