@@ -1,4 +1,4 @@
-# AJAX
+# AJAX请求过程
 
 1.  得到一个`ajax`对象
 
@@ -36,13 +36,13 @@
   xhr.onreadystatechange = function (){}
   xhr.onload = function (){
     if (xhr.status === 200) {
-			console.log('成功返回资源');
-			console.log(xhr.responseText);	// 响应数据
-			console.log( xhr.readyState );	// 状态 正在进行哪一步
-		} else if (xhr.status === 404) {
-			console.log('http状态码返回404');
-			console.log(xhr.statusText);
-		}
+  		console.log('成功返回资源');
+  		console.log(xhr.responseText);	// 响应数据
+  		console.log( xhr.readyState );	// 状态 正在进行哪一步
+  	} else if (xhr.status === 404) {
+  		console.log('http状态码返回404');
+  		console.log(xhr.statusText);
+  	}
   }
   ```
 
