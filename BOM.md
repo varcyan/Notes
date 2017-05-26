@@ -1,12 +1,23 @@
 # BOM
 
-> BOM  Browser Object Model 浏览器对象模型
-> 它的核心是 window, 同时这个window还是JS的顶级对象
+### window 对象
 
-### window.navigator.userAgent
+>   BOM 的核心对象是 window，它表示浏览器的一个实例。
 
-> 用户代理信息.
-> 可以获取到当前浏览器的内核信息以及用户代理信息（用户使用平台）
+双重角色： 
+
+1.  通过 js 访问浏览器窗口的一个接口
+
+2.  ECMAscript 规定的 Global 对象
+
+    *因此在网页中定义的任何一个对象、变量或函数，都以 window 作为 其 Global 对象*
+
+
+
+#### window.navigator.userAgent
+
+>   用户代理信息.
+>   可以获取到当前浏览器的内核信息以及用户代理信息（用户使用平台）
 
 例：判断是否为PC端
 
@@ -28,9 +39,9 @@ function isPC(){
 }
 ```
 
-### window.location
+#### window.location
 
-> 储存了浏览器的导航信息
+>   储存了浏览器的导航信息
 
 **一个完整的url的构成**
 
@@ -40,7 +51,7 @@ function isPC(){
 
 #### window.location.hash
 
-> 可以拿到 包括#号后面的值（字符串类型），当设定hash的时候浏览器窗口不会刷新
+>   可以拿到 包括#号后面的值（字符串类型），当设定hash的时候浏览器窗口不会刷新
 
 ```javascript
 // 可以设置新的值
@@ -48,9 +59,9 @@ window.location.hash = 'a=2';
 window.location.hash = '#a=2';
 ```
 
-####  window.location.href
+#### window.location.href
 
-> 用来获取完整的url信息
+>   用来获取完整的url信息
 
 ```javascript
 window.location.href = '新的url';  //可以做页面的跳转
@@ -61,50 +72,53 @@ window.location.assign('http://varcyan.github.io/');
 
 #### window.location.reload()
 
-> 用来刷新当前页面
+>   用来刷新当前页面
 
 #### window.location.search
 
-> 获取到search值,包括 '?' 以后 '#' 以前的数值
+>   获取到search值,包括 '?' 以后 '#' 以前的数值
 
-- 如果修改了search，页面会刷新
+-   如果修改了search，页面会刷新
 
-### 获取设备尺寸window.screen
+#### 获取设备尺寸window.screen
 
-> 保存着用户的设备信息
+>   保存着用户的设备信息
 
-#### window.screen.width 
+##### window.screen.width
 
-> 获取屏幕的像素宽度（只读）
+>   获取屏幕的像素宽度（只读）
 
-#### window.screen.height
+##### window.screen.height
 
-> 获取屏幕的像素高度（只读）
+>   获取屏幕的像素高度（只读）
 
-### 获取浏览器尺寸
+#### 获取浏览器尺寸
 
-#### window.outerWidth
+##### window.outerWidth
 
-#### window.outerHeight
+##### window.outerHeight
 
-> 可以获取到 浏览器的 窗口宽高
+>   可以获取到 浏览器的 窗口宽高
 
-### 获取文档尺寸
+#### 获取文档尺寸
 
-#### window.innerWidth
+##### window.innerWidth
 
-#### window.innerHeight
+##### window.innerHeight
 
-> 可以获取到文档的宽高
+>   可以获取到文档的宽高
 
-### 打开关闭一个浏览器窗口
+#### 打开关闭一个浏览器窗口
 
-#### window.close()
+##### window.close()
 
-> 关闭一个浏览器窗口
+>   关闭一个浏览器窗口
 
-#### window.open()
+##### window.open()
 
-> 用于打开一个浏览器窗口
->
-> window.open('page.html', 'newwindow', 'height=100, width=400, top=0, left=0, toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no')
+>   用于打开一个浏览器窗口
+
+```
+window.open('page.html', 'newwindow', 'height=100, width=400, top=0, left=0, toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, status=no')
+```
+
