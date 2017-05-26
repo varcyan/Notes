@@ -3,15 +3,13 @@
 ### window 对象
 
 >   BOM 的核心对象是 window，它表示浏览器的一个实例。
+>
+>   双重角色： 
+>
+>   1.  通过 js 访问浏览器窗口的一个接口
+>   2.  ECMAscript 规定的 Global 对象
 
-双重角色： 
-
-1.  通过 js 访问浏览器窗口的一个接口
-
-2.  ECMAscript 规定的 Global 对象
-
-    *因此在网页中定义的任何一个对象、变量或函数，都以 window 作为 其 Global 对象*
-
+*因此在网页中定义的任何一个对象、变量或函数，都以 window 作为 其 Global 对象*
 
 
 #### window.navigator.userAgent
