@@ -28,7 +28,7 @@
   ```
   POST请求：如果需要像 HTML 表单那样 POST 数据，请使用 setRequestHeader() 来添加 HTTP 头。然后在 send() 方法中规定您希望发送的数据：
   ```javascript
-  xhr.setRequestHeder("Content-Type","application/x-www-form-urlencoded;charset=UTF-8");
+  xhr.setRequestHeader("Content-Type","application/x-www-form-urlencoded;charset=UTF-8");
   xhr.send("name="+userName+"&age="+userAge);
   ```
 4. 处理响应
