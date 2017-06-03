@@ -42,6 +42,12 @@ class Observe {
 	}
 }
 ```
+事件监听 绑定的是时间监听器
+在這个模式中需要三个部分组成
+1.  发布者
+2.  订阅者（观察者）
+3.  订阅状态（订阅内容）
+
 ```javascript
 var ob = new Observe;
 ob.take(1,function (){
