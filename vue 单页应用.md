@@ -85,11 +85,14 @@ import Home from '@/components/home'
       this 指向实例
       // 在路由给更新的时候
   }
+  ```
  ```
 4. 链接
-  ```
+ ```
   a href="#/user/1"
   router-link to=""
+  <router-link :to="{name:'study'}"><router-link>
+
     to="路径" 相对于当前目录
     to="/路径" 相对于根目录
   ```
@@ -148,7 +151,6 @@ Vue.use(axios)  //* 重要
 export default {
 
 }
-
 ```
 
 **跨域问题**
