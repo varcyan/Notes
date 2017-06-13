@@ -72,6 +72,25 @@ document.cookie = "allinfo="+escape("user=Tom&age=25&sex=male&city=nanjing&zip=2
 
 只有本地浏览器端可访问数据，服务器不能访问本地存储直到故意通过POST或者GET的通道发送到服务器；每个域5MB；没有过期数据，它将保留知道用户从浏览器清除或者使用Javascript代码移除
 
+设置：
+
+	localStorage.setItem(key,value);
+获取：
+
+```
+localStorage.getItem(key);
+```
+
+删除：
+
+	localStorage.removeItem(key);
+清除所有localStorage：
+
+
+	localStorage.clear();
+
+
+
 ### sessionStorage
 
 **描述：** 存储在本地的数据  
