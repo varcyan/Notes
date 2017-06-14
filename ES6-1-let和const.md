@@ -141,3 +141,60 @@ var constantize = (obj) => {
 ```
 
 ### ES6声明变量的六种方法
+
+## global对象
+
+ES5的顶层对象，本身也是一个问题，因为它在各种实现里面是不统一的。
+
+-   浏览器里面，顶层对象是`window`，但 Node 和 Web Worker 没有`window`。
+-   浏览器和 Web Worker 里面，`self`也指向顶层对象，但是Node没有`self`。
+-   Node 里面，顶层对象是`global`，但其他环境都不支持。
+
+综上所述，很难找到一种方法，可以在所有情况下，都取到顶层对象。下面是两种勉强可以使用的方法。
+
+```
+// 方法一
+(typeof window !== 'undefined'
+   ? window
+   : (typeof process === 'object' &&
+      typeof require === 'function' &&
+      typeof global === 'object')
+     ? global
+     : this);
+
+// 方法二
+var getGlobal = function () {
+  if (typeof self !== 'undefined') { return self; }
+  if (typeof window !== 'undefined') { return window; }
+  if (typeof global !== 'undefined') { return global; }
+  throw new Error('unable to locate global object');
+};
+
+```
+
+现在有一个[提案](https://github.com/tc39/proposal-global)，在语言标准的层面，引入`global`作为顶层对象。也就是说，在所有环境下，`global`都是存在的，都可以从它拿到顶层对象。
+
+垫片库[`system.global`](https://github.com/ljharb/System.global)模拟了这个提案，可以在所有环境拿到`global`。
+
+```
+// CommonJS的写法
+require('system.global/shim')();
+
+// ES6模块的写法
+import shim from 'system.global/shim'; shim();
+
+```
+
+上面代码可以保证各种环境里面，`global`对象都是存在的。
+
+```
+// CommonJS的写法
+var global = require('system.global')();
+
+// ES6模块的写法
+import getGlobal from 'system.global';
+const global = getGlobal();
+
+```
+
+上面代码将顶层对象放入变量`global`。
