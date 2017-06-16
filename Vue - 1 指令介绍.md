@@ -25,6 +25,12 @@ var app2 = new Vue({
 })
 ```
 
+这对布尔值的属性也有效 —— 如果条件被求值为 false 的话该属性会被移除：
+
+```
+<button v-bind:disabled="someDynamicCondition">Button</button>
+```
+
 ## v-if
 
 `v-if` 如果 条件成立则执行
@@ -117,6 +123,16 @@ var app6 = new Vue({
   }
 })
 ```
+
+## v-once
+
+通过使用 [v-once 指令](https://cn.vuejs.org/v2/api/#v-once)，你也能执行一次性地插值，当数据改变时，插值处的内容不会更新。但请留心这会影响到该节点上所有的数据绑定：
+
+```
+<span v-once>This will never change: {{ msg }}</span>
+```
+
+只渲染元素和组件**一次**。随后的重新渲染,元素/组件及其所有的子节点将被视为静态内容并跳过。这可以用于优化更新性能。
 
 ## 组件化应用构建
 
