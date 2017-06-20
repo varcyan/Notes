@@ -1,11 +1,11 @@
 # AJAX请求过程
 
-1.  得到一个`ajax`对象
+## 1. 得到一个`ajax`对象
 
   ```javascript
   var xhr = new XMLHttpRequest();
   ```
-2. 准备请求
+## 2.准备请求
   ```javascript
   xhr.open(method,url,async)
   ```
@@ -17,7 +17,7 @@
   ```javascript
   xhr.open("POST",demo.php,true);
   ```
-3. 发送请求
+## 3. 发送请求
   ```javascript
   xhr.send()
   ```
@@ -31,7 +31,7 @@
   xhr.setRequestHeader("Content-Type","application/x-www-form-urlencoded;charset=UTF-8");
   xhr.send("name="+userName+"&age="+userAge);
   ```
-4. 处理响应
+## 4. 处理响应
   ```javascript
   xhr.onreadystatechange = function (){}
   xhr.onload = function (){

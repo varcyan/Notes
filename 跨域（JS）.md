@@ -69,3 +69,8 @@ web sockets原理：在[js](http://lib.csdn.net/base/javascript)创建了web soc
 
 只有在支持web socket协议的服务器上才能正常工作。
 
+
+
+ie里跨域要使用 var xml =  new XDomainRequest() onload
+
+后端设置头信息 设置允许访问该资源的域 （协议 端口 域名）
