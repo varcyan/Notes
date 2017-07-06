@@ -13,4 +13,16 @@ git pull
 git branch --set-upstream-to=origin/<branch> develop
 # 拉取远程分支的变化
 git pull origin develop
+
+# 合并分支的时候
+# dev 分支上提交变化
+git commit -a -m '备注'
+# 切换到要合并的分支
+git checkout master
+# 合并分支前先拉取
+git pull
+# 合并
+git merge dev
+# 推送至远程仓库
+git push origin master
 ```
