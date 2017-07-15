@@ -6,6 +6,7 @@ git branch -r	// 查看远程分支
 git checkout dev	// 切换到dev分支
 git checkout -b dev	// 新建并切换到dev分支
 git branch -d dev	// 删除dev分支
+git push origin :origin-name	// 删除远程分支
 git merge branch-name	// 指定分支合并至当前分支
 ```
 
