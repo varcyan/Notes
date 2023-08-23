@@ -101,7 +101,7 @@
 
 20. 元素使用dispaly:block展示，改变了元素的行内属性
 
-    使用display: inline-block;也可以使元素展示出来； 
+    使用display: inline-block;也可以使元素展示出来；
 
 21. position与float
 
@@ -112,7 +112,6 @@
 22. IE6使用js处理图片（相对较大的）后，最大父级底部多出10px;
     1. 给出现问题的最大父级加position: relative;
     2. 使用jpg图片;
-
 
 23. border：1px在移动端不用使用rem单位
 
@@ -139,7 +138,6 @@
     2. 去除div1的margin-bottom，给div2设置margin-top;
     3. 同级元素最好都浮动;  
 
-
 28. 淘宝商品详情页-商品介绍与店铺介绍栏中间的边框处理
 
     需求：未知是否等高 边框贯穿容器
@@ -162,7 +160,7 @@
 
 34. var s = '1s' s++; // NaN  ++做的是数学运算
 
-35. []==![] //true   
+35. []==![] //true
 
     '!' obg   会把对象转化为布尔值 false
 
