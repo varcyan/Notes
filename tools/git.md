@@ -8,13 +8,13 @@
 
 ### 3.创建功能/特性分支
 
-```
+```zsh
 git checkout -b fix-issue
 ```
 
 ### 4.将特性分支推到你fork的仓库
 
-```
+```zsh
 git push origin fix-issue
 ```
 
@@ -24,34 +24,34 @@ git push origin fix-issue
 
 ### 7.将主存储库作为上游添加到克隆仓库中
 
-```
+```zsh
 git remote add upstream git@github.com:google/guava.git
 ```
 
 使用以下命令验证上游设置是否正确：
 
-```
+```zsh
 git remote -v
 ```
 
 它应该显示以下值，以确认源和上游指向正确的仓库：
 
-```
-origin  <git@github.com>:theawesomenayak/guava.git (fetch)
-origin  <git@github.com>:theawesomenayak/guava.git (push)
-upstream        <git@github.com>:google/guava.git (fetch)
-upstream        <git@github.com>:google/guava.git (push)
+```zsh
+origin      <git@github.com>:theawesomenayak/guava.git (fetch)
+origin      <git@github.com>:theawesomenayak/guava.git (push)
+upstream    <git@github.com>:google/guava.git (fetch)
+upstream    <git@github.com>:google/guava.git (push)
 ```
 
 ### 8.从上游更新你的master分支
 
-```
+```zsh
 git pull upstream master
 ```
 
 ### 9.将主分支push到你的fork仓库
 
-```
+```zsh
 git push origin master
 ```
 
@@ -59,12 +59,12 @@ git push origin master
 
 特性合并到主仓库后，便不再需要它，可以将其删除：
 
-```
+```zsh
 git branch -d fix-issue
 ```
 
 你还可以从fork的仓库中删除远程分支：
 
-```
+```zsh
 git push origin --delete fix-issue
 ```
